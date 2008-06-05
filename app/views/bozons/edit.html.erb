@@ -1,0 +1,12 @@
+<h1>Editing bozon</h1>
+
+<% form_for(@bozon) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bozon %> |
+<%= link_to 'Back', bozons_path %>
