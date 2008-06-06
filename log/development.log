@@ -817,3 +817,753 @@ Completed in 0.00751 (133 reqs/sec) | Rendering: 0.00148 (19%) | DB: 0.00025 (3%
 [0m
   [4;35;1mSQL (0.000070)[0m   [0mSELECT version FROM "schema_migrations"[0m
   [4;36;1mSQL (0.001206)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000453)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000111)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000117)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000278)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000213)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001363)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000147)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001025)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001218)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000345)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000072)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000990)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000035)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000340)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001188)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000150)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000900)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000896)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001059)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000434)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000108)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000106)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000116)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000045)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000166)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001161)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000127)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000927)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001061)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000220)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000854)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000481)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000120)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000184)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001369)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000189)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001101)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000992)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000907)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000417)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000108)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000109)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000216)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000203)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001581)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000194)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000906)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000967)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000899)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000446)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000037)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000162)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001176)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000128)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000857)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000993)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000249)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000993)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000428)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000123)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000171)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000321)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001311)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000221)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.004642)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000870)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000822)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000442)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000110)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000123)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000166)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001135)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000130)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.004568)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000958)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000878)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000447)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000120)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000037)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000121)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000159)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001475)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000276)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001019)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000986)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000222)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.005740)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000413)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000141)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000035)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000171)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001151)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000124)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000896)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000939)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.003648)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000419)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000123)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000035)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000165)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001181)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000130)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000901)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.004776)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000217)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000860)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000432)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000126)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000121)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000171)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001221)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000147)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000905)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.004245)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000152)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000068)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000876)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000498)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000108)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000105)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000126)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000169)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001180)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000132)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.005658)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001021)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000227)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000984)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000491)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000110)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000167)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001157)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000140)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000921)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.004634)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000196)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000923)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000463)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000234)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001242)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000132)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000876)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000896)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000069)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000853)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000111)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000124)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000127)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000035)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000181)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001240)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000132)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000910)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000918)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000165)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000068)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000861)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000425)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000138)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000148)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000192)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001246)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000141)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000861)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000882)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000075)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.003427)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000519)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000110)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000111)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000119)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000149)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000157)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001151)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000133)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000867)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000897)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.004383)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000422)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000112)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000122)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000035)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000363)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000185)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001188)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000159)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.004314)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001118)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000231)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001010)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000566)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000115)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000130)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000035)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000182)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001689)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000207)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000887)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001477)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000302)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000075)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.001488)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000434)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000108)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000132)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000035)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000161)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001317)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000187)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000943)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000940)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000067)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000933)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000504)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000141)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000037)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000316)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001227)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000175)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000863)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.008701)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000070)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000847)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000429)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000108)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000114)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000118)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000165)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001307)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000224)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000954)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000914)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000151)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000068)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000883)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000504)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000111)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000178)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000151)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000037)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000198)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001510)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000299)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001238)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001578)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000223)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000071)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000876)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m
+  [4;36;1mSQL (0.000427)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000111)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000137)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000036)[0m   [0mPRAGMA index_list("bozons")[0m
+  [4;36;1mSQL (0.000153)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000196)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001372)[0m   [0;1mCREATE TABLE "bozons" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.000291)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.001005)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.000992)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000221)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000071)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.000866)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20080605161332')[0m

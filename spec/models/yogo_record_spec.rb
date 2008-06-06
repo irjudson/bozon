@@ -3,31 +3,9 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe YogoRecord do
   before(:each) do
     # Required data members
-    # version
+    # version: the version of this bozon record
     # type {:datatype => "Basic Data Definition", :datamodel => "Model Component", :datarecord => "Actual Piece of Data"}
-    # stuff We need to define what "stuff" means...I think it means payload content for this *type*
-    @json_dt_string = {   :version => 0,
-                   :type => :datatype,
-                   :content => {
-                              :label => :string,
-                              :class => 'String'
-                             } 
-                }.to_json
-    @json_dt_integer = {   :version => 0,
-                   :type => :datatype,
-                   :content => {
-                              :label => :integer,
-                              :class => 'Integer'
-                             } 
-                }.to_json
-
-    @json_dm = {:version => 0,
-                :type => :datamodel,
-                :content =>  [{:label => :first_name, :datatype => :string},
-                            {:label => :last_name, :datatype => :string},
-                           ]
-                }.to_json
-    #this one is used for tests below that just want a random bozon to test
+    # content:  payload content for this *type*
     @json_hash = {:version => 0,
                :type => :datarecord,
                :content => {
@@ -76,6 +54,24 @@ describe YogoRecord do
     @json_hash[:content].should be_nil
     @yogo = YogoRecord.new(@json_hash.to_json)
     @yogo.should_not be_valid
+  end
+  
+  it "should have content which is an array or hash" do
+    @yogo = YogoRecord.new(@json_hash.to_json)
+    [Array,Hash].should include(@yogo.content.class)
+  end
+  
+  it "should not be valid if the content is not an array or hash" do
+    @json_hash[:content] = 'This is not an array or hash.'
+    @yogo = YogoRecord.new(@json_hash.to_json)
+    @yogo.should_not be_valid
+  end
+  
+  it "should respond to a to_json method which returns a json string" do
+    @yogo = YogoRecord.new(@json_hash.to_json)
+    @yogo.should respond_to('to_json')
+    @yogo.should be_valid
+    @yogo.to_json.should_not be_empty # this may be empty if the YR is invalid
   end
 
 end
