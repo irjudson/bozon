@@ -9,10 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080605161332) do
+ActiveRecord::Schema.define(:version => 20080926144127) do
 
   create_table "bozons", :force => true do |t|
-    t.text     "content"
+    t.string   "data"
+    t.string   "cid"
+    t.string   "uuid"
+    t.string   "parent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
