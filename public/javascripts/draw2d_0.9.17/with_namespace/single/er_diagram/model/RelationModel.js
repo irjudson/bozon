@@ -1,0 +1,1 @@
+draw2d.RelationModel=function(_5ccc,_5ccd,toKey){this.fromTable=_5ccc;this.toTable=_5ccd;this.toKey=toKey;};draw2d.RelationModel.prototype.type="RelationModel";draw2d.RelationModel.prototype.getFromTableModel=function(){return this.fromTable;};draw2d.RelationModel.prototype.getToTableModel=function(){return this.toTable;};

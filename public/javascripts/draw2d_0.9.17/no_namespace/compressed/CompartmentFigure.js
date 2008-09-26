@@ -1,0 +1,10 @@
+/**
+This notice must be untouched at all times.
+This is the COMPRESSED version of Draw2D
+WebSite: http://www.draw2d.org
+Copyright: 2006 Andreas Herz. All rights reserved.
+Created: 5.11.2006 by Andreas Herz (Web: http://www.freegroup.de )
+LICENSE: LGPL
+**/
+
+CompartmentFigure=function(){Node.call(this);this.children=new ArrayList();this.setBorder(new LineBorder(1));this.dropable=new DropTarget(this.html);this.dropable.node=this;this.dropable.addEventListener("figureenter",function(_15ba){_15ba.target.node.onFigureEnter(_15ba.relatedTarget.node);});this.dropable.addEventListener("figureleave",function(_15bb){_15bb.target.node.onFigureLeave(_15bb.relatedTarget.node);});this.dropable.addEventListener("figuredrop",function(_15bc){_15bc.target.node.onFigureDrop(_15bc.relatedTarget.node);});};CompartmentFigure.prototype=new Node;CompartmentFigure.prototype.type="CompartmentFigure";CompartmentFigure.prototype.onFigureEnter=function(_15bd){};CompartmentFigure.prototype.onFigureLeave=function(_15be){};CompartmentFigure.prototype.onFigureDrop=function(_15bf){};CompartmentFigure.prototype.getChildren=function(){return this.children;};CompartmentFigure.prototype.addChild=function(_15c0){_15c0.setZOrder(this.getZOrder()+1);_15c0.setParent(this);this.children.add(_15c0);};CompartmentFigure.prototype.removeChild=function(_15c1){_15c1.setParent(null);this.children.remove(_15c1);};CompartmentFigure.prototype.setZOrder=function(index){Node.prototype.setZOrder.call(this,index);for(var i=0;i<this.children.getSize();i++){this.children.get(i).setZOrder(index+1);}};CompartmentFigure.prototype.setPosition=function(xPos,yPos){var oldX=this.getX();var oldY=this.getY();Node.prototype.setPosition.call(this,xPos,yPos);for(var i=0;i<this.children.getSize();i++){var child=this.children.get(i);child.setPosition(child.getX()+this.getX()-oldX,child.getY()+this.getY()-oldY);}};CompartmentFigure.prototype.onDrag=function(){var oldX=this.getX();var oldY=this.getY();Node.prototype.onDrag.call(this);for(var i=0;i<this.children.getSize();i++){var child=this.children.get(i);child.setPosition(child.getX()+this.getX()-oldX,child.getY()+this.getY()-oldY);}};

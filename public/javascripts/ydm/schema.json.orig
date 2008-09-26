@@ -1,0 +1,362 @@
+[{
+  "teams": {
+    "name": "teams",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "string",
+        "name": "name"
+      },
+      {
+        "type": "datetime",
+        "name": "created_at"
+      },
+      {
+        "type": "datetime",
+        "name": "updated_at"
+      },
+      {
+        "type": "string",
+        "name": "color"
+      }
+    ]
+  },
+  "roles": {
+    "name": "roles",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "string",
+        "name": "title",
+        "null": "false"
+      },
+      {
+        "type": "datetime",
+        "name": "created_at"
+      },
+      {
+        "type": "datetime",
+        "name": "updated_at"
+      },
+      {
+        "type": "object",
+        "values": [
+
+        ],
+        "name": "users"
+      }
+    ]
+  },
+  "experiments": {
+    "name": "experiments",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "integer",
+        "name": "probe_id"
+      },
+      {
+        "type": "text",
+        "name": "notes"
+      },
+      {
+        "type": "text",
+        "name": "suggestions"
+      },
+      {
+        "type": "boolean",
+        "name": "success"
+      },
+      {
+        "type": "text",
+        "name": "aliases"
+      },
+      {
+        "type": "datetime",
+        "name": "created_at"
+      },
+      {
+        "type": "datetime",
+        "name": "updated_at"
+      },
+      {
+        "type": "integer",
+        "name": "user_id"
+      },
+      {
+        "type": "boolean",
+        "name": "negative"
+      },
+      {
+        "type": "float",
+        "name": "temperature"
+      },
+      {
+        "type": "string",
+        "name": "time_constant"
+      }
+    ]
+  },
+  "comments": {
+    "name": "comments",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "string",
+        "limit": "50",
+        "name": "title",
+        "default": "\"\""
+      },
+      {
+        "type": "text",
+        "name": "comment",
+        "default": "\"\""
+      },
+      {
+        "type": "datetime",
+        "name": "created_at",
+        "null": "false"
+      },
+      {
+        "type": "integer",
+        "name": "commentable_id",
+        "default": "0",
+        "null": "false"
+      },
+      {
+        "type": "string",
+        "limit": "15",
+        "name": "commentable_type",
+        "default": "\"\"",
+        "null": "false"
+      },
+      {
+        "type": "integer",
+        "name": "user_id",
+        "default": "0",
+        "null": "false"
+      }
+    ]
+  },
+  "probes": {
+    "name": "probes",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "datetime",
+        "name": "created_at"
+      },
+      {
+        "type": "datetime",
+        "name": "updated_at"
+      },
+      {
+        "type": "text",
+        "name": "notes"
+      },
+      {
+        "type": "object",
+        "values": [
+
+        ],
+        "name": "clones"
+      }
+    ]
+  },
+  "assets": {
+    "name": "assets",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "string",
+        "name": "filename"
+      },
+      {
+        "type": "string",
+        "name": "content_type"
+      },
+      {
+        "type": "integer",
+        "name": "size"
+      },
+      {
+        "type": "integer",
+        "name": "width"
+      },
+      {
+        "type": "integer",
+        "name": "height"
+      },
+      {
+        "type": "integer",
+        "name": "parent_id"
+      },
+      {
+        "type": "string",
+        "name": "thumbnail"
+      },
+      {
+        "type": "datetime",
+        "name": "created_at"
+      },
+      {
+        "type": "datetime",
+        "name": "updated_at"
+      },
+      {
+        "type": "integer",
+        "name": "clone_id"
+      },
+      {
+        "type": "integer",
+        "name": "experiment_id"
+      },
+      {
+        "type": "integer",
+        "name": "user_id"
+      }
+    ]
+  },
+  "clones": {
+    "name": "clones",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "string",
+        "name": "cloneid"
+      },
+      {
+        "type": "text",
+        "name": "notes"
+      },
+      {
+        "type": "datetime",
+        "name": "created_at"
+      },
+      {
+        "type": "datetime",
+        "name": "updated_at"
+      },
+      {
+        "type": "string",
+        "name": "plate"
+      },
+      {
+        "type": "string",
+        "name": "well"
+      },
+      {
+        "type": "string",
+        "name": "fp"
+      },
+      {
+        "type": "object",
+        "values": [
+
+        ],
+        "name": "probes"
+      }
+    ]
+  },
+  "users": {
+    "name": "users",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "string",
+        "name": "login"
+      },
+      {
+        "type": "string",
+        "name": "first_name"
+      },
+      {
+        "type": "string",
+        "name": "last_name"
+      },
+      {
+        "type": "string",
+        "name": "email"
+      },
+      {
+        "type": "string",
+        "limit": "40",
+        "name": "crypted_password"
+      },
+      {
+        "type": "string",
+        "limit": "40",
+        "name": "salt"
+      },
+      {
+        "type": "datetime",
+        "name": "created_at"
+      },
+      {
+        "type": "datetime",
+        "name": "updated_at"
+      },
+      {
+        "type": "string",
+        "name": "remember_token"
+      },
+      {
+        "type": "datetime",
+        "name": "remember_token_expires_at"
+      },
+      {
+        "type": "integer",
+        "name": "team_id"
+      },
+      {
+        "type": "integer",
+        "name": "logins"
+      },
+      {
+        "type": "object",
+        "values": [
+
+        ],
+        "name": "roles"
+      }
+    ]
+  },
+  "audit_logs": {
+    "name": "audit_logs",
+    "type": "object",
+    "type_slots": [
+      {
+        "type": "string",
+        "name": "event"
+      },
+      {
+        "type": "text",
+        "name": "details"
+      },
+      {
+        "type": "datetime",
+        "name": "created_at"
+      },
+      {
+        "type": "datetime",
+        "name": "updated_at"
+      },
+      {
+        "type": "integer",
+        "name": "user_id"
+      },
+      {
+        "type": "string",
+        "name": "target_type"
+      },
+      {
+        "type": "integer",
+        "name": "target_id"
+      },
+      {
+        "type": "text",
+        "name": "target_data"
+      }
+    ]
+  }
+}]

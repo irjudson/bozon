@@ -1,0 +1,10 @@
+/**
+This notice must be untouched at all times.
+This is the COMPRESSED version of Draw2D
+WebSite: http://www.draw2d.org
+Copyright: 2006 Andreas Herz. All rights reserved.
+Created: 5.11.2006 by Andreas Herz (Web: http://www.freegroup.de )
+LICENSE: LGPL
+**/
+
+draw2d.Graphics=function(_1ae0,_1ae1,_1ae2){this.jsGraphics=_1ae0;this.xt=_1ae2.x;this.yt=_1ae2.y;this.radian=_1ae1*Math.PI/180;this.sinRadian=Math.sin(this.radian);this.cosRadian=Math.cos(this.radian);};draw2d.Graphics.prototype.setStroke=function(x){this.jsGraphics.setStroke(x);};draw2d.Graphics.prototype.drawLine=function(x1,y1,x2,y2){var _x1=this.xt+x1*this.cosRadian-y1*this.sinRadian;var _y1=this.yt+x1*this.sinRadian+y1*this.cosRadian;var _x2=this.xt+x2*this.cosRadian-y2*this.sinRadian;var _y2=this.yt+x2*this.sinRadian+y2*this.cosRadian;this.jsGraphics.drawLine(_x1,_y1,_x2,_y2);};draw2d.Graphics.prototype.fillRect=function(x,y,w,h){var x1=this.xt+x*this.cosRadian-y*this.sinRadian;var y1=this.yt+x*this.sinRadian+y*this.cosRadian;var x2=this.xt+(x+w)*this.cosRadian-y*this.sinRadian;var y2=this.yt+(x+w)*this.sinRadian+y*this.cosRadian;var x3=this.xt+(x+w)*this.cosRadian-(y+h)*this.sinRadian;var y3=this.yt+(x+w)*this.sinRadian+(y+h)*this.cosRadian;var x4=this.xt+x*this.cosRadian-(y+h)*this.sinRadian;var y4=this.yt+x*this.sinRadian+(y+h)*this.cosRadian;this.jsGraphics.fillPolygon([x1,x2,x3,x4],[y1,y2,y3,y4]);};draw2d.Graphics.prototype.fillPolygon=function(_1af8,_1af9){var rotX=new Array();var rotY=new Array();for(var i=0;i<_1af8.length;i++){rotX[i]=this.xt+_1af8[i]*this.cosRadian-_1af9[i]*this.sinRadian;rotY[i]=this.yt+_1af8[i]*this.sinRadian+_1af9[i]*this.cosRadian;}this.jsGraphics.fillPolygon(rotX,rotY);};draw2d.Graphics.prototype.setColor=function(color){this.jsGraphics.setColor(color.getHTMLStyle());};draw2d.Graphics.prototype.drawPolygon=function(_1afe,_1aff){var rotX=new Array();var rotY=new Array();for(var i=0;i<_1afe.length;i++){rotX[i]=this.xt+_1afe[i]*this.cosRadian-_1aff[i]*this.sinRadian;rotY[i]=this.yt+_1afe[i]*this.sinRadian+_1aff[i]*this.cosRadian;}this.jsGraphics.drawPolygon(rotX,rotY);};

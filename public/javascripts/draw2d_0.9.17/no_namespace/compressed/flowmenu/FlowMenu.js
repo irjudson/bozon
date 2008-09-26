@@ -1,0 +1,10 @@
+/**
+This notice must be untouched at all times.
+This is the COMPRESSED version of Draw2D
+WebSite: http://www.draw2d.org
+Copyright: 2006 Andreas Herz. All rights reserved.
+Created: 5.11.2006 by Andreas Herz (Web: http://www.freegroup.de )
+LICENSE: LGPL
+**/
+
+FlowMenu=function(_d9d){this.actionDelete=new ButtonDelete(this);this.actionFront=new ButtonMoveFront(this);this.actionBack=new ButtonMoveBack(this);ToolPalette.call(this);this.setDimension(20,60);this.setBackgroundColor(new Color(220,255,255));this.currentFigure=null;this.myworkflow=_d9d;this.added=false;this.setDeleteable(false);this.setCanDrag(false);this.setResizeable(false);this.setSelectable(false);this.setBackgroundColor(null);this.setColor(null);this.scrollarea.style.borderBottom="0px";this.actionDelete.setPosition(0,0);this.actionFront.setPosition(0,18);this.actionBack.setPosition(0,36);this.addChild(this.actionDelete);this.addChild(this.actionFront);this.addChild(this.actionBack);};FlowMenu.prototype=new ToolPalette;FlowMenu.prototype.setAlpha=function(_d9e){Figure.prototype.setAlpha.call(this,_d9e);};FlowMenu.prototype.hasTitleBar=function(){return false;};FlowMenu.prototype.onSelectionChanged=function(_d9f){if(_d9f==this.currentFigure){return;}if(this.added==true){this.myworkflow.removeFigure(this);this.added=false;}if(_d9f!=null&&this.added==false){if(this.myworkflow.getEnableSmoothFigureHandling()==true){this.setAlpha(0.01);}this.myworkflow.addFigure(this,100,100);this.added=true;}if(this.currentFigure!=null){this.currentFigure.detachMoveListener(this);}this.currentFigure=_d9f;if(this.currentFigure!=null){this.currentFigure.attachMoveListener(this);this.onOtherFigureMoved(this.currentFigure);}};FlowMenu.prototype.setWorkflow=function(_da0){Figure.prototype.setWorkflow.call(this,_da0);};FlowMenu.prototype.onOtherFigureMoved=function(_da1){var pos=_da1.getPosition();this.setPosition(pos.x+_da1.getWidth()+7,pos.y-16);};

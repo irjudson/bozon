@@ -1,11 +1,19 @@
-<h1>Listing bozons</h1>
+<h1>Listing Bozons</h1>
 
 <table>
   <tr>
+    <th>Data</th>
+    <th>Content ID</th>
+    <th>UUID</th>
+    <th>Parent</th>
   </tr>
 
 <% for bozon in @bozons %>
   <tr>
+    <td><%=h bozon.data %></td>
+    <td><%=h bozon.cid %></td>
+    <td><%=h bozon.uuid %></td>
+    <td><%=h bozon.parent %></td>
     <td><%= link_to 'Show', bozon %></td>
     <td><%= link_to 'Edit', edit_bozon_path(bozon) %></td>
     <td><%= link_to 'Destroy', bozon, :confirm => 'Are you sure?', :method => :delete %></td>

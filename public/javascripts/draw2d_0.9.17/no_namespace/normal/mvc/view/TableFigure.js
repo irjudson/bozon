@@ -1,0 +1,198 @@
+/* This notice must be untouched at all times.
+
+Open-jACOB Draw2D
+The latest version is available at
+http://www.openjacob.org
+
+Copyright (c) 2006 Andreas Herz. All rights reserved.
+Created 5. 11. 2006 by Andreas Herz (Web: http://www.freegroup.de )
+
+LICENSE: LGPL
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License (LGPL) as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA,
+or see http://www.gnu.org/copyleft/lesser.html
+*/
+TableFigure=function()
+{
+  this.table = null;
+  this.header = null;
+
+  Node.call(this);
+
+  this.setResizeable(false);
+}
+
+TableFigure.prototype = new Node;
+TableFigure.prototype.type="TableFigure";
+
+
+TableFigure.prototype.paint=function()
+{
+   var model = this.getModel();
+
+   this.setPosition(model.getPosition().x, model.getPosition().y);
+
+   this.header.innerHTML = model.getName();
+   this.setDimension(this.getWidth(),this.getHeight());
+
+   var fields = this.model.getFieldModels();
+   for(var i=0; i<fields.getSize(); i++)
+   {
+     this.addColumn(fields.get(i).getName(),fields.get(i).getExtendedDescriptionLabel());
+   }
+}
+
+
+TableFigure.prototype.propertyChange=function(event)
+{
+  switch(event.property)
+  {
+    case TableModel.EVENT_POSITION_CHANGED:
+        this.setPosition(event.newValue.x,event.newValue.y);
+        break;
+    case TableModel.EVENT_FIELD_ADDED:
+        this.addColumn(event.newValue.getName(),event.newValue.getExtendedDescriptionLabel());
+        break;
+    case TableModel.EVENT_KEY_ADDED:
+        this.refreshConnections();
+        break;
+    case TableModel.EVENT_NAME_CHANGED:
+        this.header.innerHTML = model.getName();
+        break;
+   }
+}
+
+
+/**
+ * Returns the Command to perform the specified Request or null.
+  *
+ * @param {EditPolicy} request describes the Command being requested
+ * @return null or a Command
+ * @type Command 
+ **/
+TableFigure.prototype.createCommand=function(/*:EditPolicy*/ request)
+{
+  if(request.getPolicy() == EditPolicy.MOVE)
+  {
+    if(!this.canDrag)
+      return null;
+    return new CommandMoveTable(this.model);
+  }
+
+  return null;
+}
+
+
+TableFigure.prototype.createHTMLElement=function()
+{
+ var item = Node.prototype.createHTMLElement.call(this);
+
+ item.style.width="100px";
+ item.style.height="100px";
+ item.style.margin="0px";
+ item.style.padding="0px";
+
+ this.table = document.createElement("table");
+ this.table.style.fontSize="8pt";
+ this.table.style.margin="0px";
+ this.table.style.padding="0px";
+ this.table.cellPadding ="0";
+ this.table.cellSpacing ="0";
+
+ var row=this.table.insertRow(0);
+ this.header=row.insertCell(0);
+ this.header.innerHTML = "";
+ this.header.colSpan="2";
+ this.header.style.background ="transparent url(header.png) repeat-x";
+ this.header.style.height ="25px";
+ this.header.style.paddingLeft ="5px";
+ this.header.style.paddingRight ="5px";
+ this.disableTextSelection(this.header);
+ item.appendChild(this.table);
+
+ return item;
+}
+
+
+/**
+ * Returns the calculated width of the figure.
+ *
+ **/
+TableFigure.prototype.getWidth=function()
+{
+  if(this.table==null)
+    return 10;
+  if(window.getComputedStyle)
+    return parseInt(getComputedStyle(this.table,'').getPropertyValue("width"));
+  return (this.table.clientWidth);
+}
+
+/**
+ * Returns the calculated height of the figure.
+ *
+ **/
+TableFigure.prototype.getHeight=function()
+{
+  if(this.table==null)
+    return 10;
+  if(window.getComputedStyle)
+    return parseInt(getComputedStyle(this.table,'').getPropertyValue("height"));
+  return (this.table.clientHeight);
+}
+
+
+/**
+ * @private
+ **/
+TableFigure.prototype.addColumn=function(/*:String*/ name, /*:String*/ label )
+{
+   var x=this.table.insertRow(this.table.rows.length);
+   var y=x.insertCell(0);
+   y.innerHTML=label;
+   y.style.backgroundColor="gray";
+   y.style.whiteSpace="nowrap";
+   y.style.padding="2px";
+   this.disableTextSelection(y);
+   this.setDimension(this.getWidth(),this.getHeight());
+
+   var port = new InputFieldFigure();
+   port.setWorkflow(this.workflow);
+   port.setName("in_"+name);
+   this.addPort(port,-5, y.offsetTop+y.clientHeight/2);
+   port.paint();
+
+   var port = new OutputFieldFigure();
+   port.setWorkflow(this.workflow);
+   port.setName("out_"+name);
+   this.addPort(port,y.offsetWidth+5, y.offsetTop+y.clientHeight/2);
+
+   // repaint this figure
+   port.paint();
+}
+
+/**
+ * Returns the List of the connection model objects for which this Figure's model is the source. 
+ * Callers must not modify the returned List. 
+ * Only called if you use the MVC pattern of Draw2D
+ *
+ * @type ArrayList
+ * @return the List of model source connections
+ * @since 0.9.15
+ */
+TableFigure.prototype.getModelSourceConnections=function()
+{
+   return this.getModel().getForeignKeyModels();
+}
+

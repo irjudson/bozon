@@ -1,0 +1,39 @@
+[
+{"text" : "Audi", "id" : 100, "leaf" : false, "cls" : "folder", "children" : [
+{"text" : "A3", "id" : 1000, "leaf" : false, "cls" : "folder", "children" :
+[ {"text" : "Fuel Economy", "id" : "100000", "leaf" : true, "cls" : "file"},
+{"text" : "Invoice", "id" : "100001", "leaf" : true, "cls" : "file"},
+{"text" : "MSRP", "id" : "100002", "leaf" : true, "cls" : "file"},
+{"text" : "Options", "id" : "100003", "leaf" : true, "cls" : "file"},
+{"text" : "Specifications", "id" : "100004", "leaf" : true, "cls" : "file"}
+]
+},
+{"text" : "TT", "id" : 1000, "leaf" : false, "cls" : "folder", "children" :
+[ {"text" : "Fuel Economy", "id" : "100000", "leaf" : true, "cls" : "file"},
+{"text" : "Invoice", "id" : "100001", "leaf" : true, "cls" : "file"},
+{"text" : "MSRP", "id" : "100002", "leaf" : true, "cls" : "file"},
+{"text" : "Options", "id" : "100003", "leaf" : true, "cls" : "file"},
+{"text" : "Specifications", "id" : "100004", "leaf" : true, "cls" : "file"}
+]
+}]
+},
+{"text" : "Cadillac", "id" : 300, "leaf" : false, "cls" : "folder", "children" : [
+{"text" : "CTS", "id" : 1000, "leaf" : false, "cls" : "folder", "children" :
+[ {"text" : "Fuel Economy", "id" : "100000", "leaf" : true, "cls" : "file"},
+{"text" : "Invoice", "id" : "100001", "leaf" : true, "cls" : "file"},
+{"text" : "MSRP", "id" : "100002", "leaf" : true, "cls" : "file"},
+{"text" : "Options", "id" : "100003", "leaf" : true, "cls" : "file"},
+{"text" : "Specifications", "id" : "100004", "leaf" : true, "cls" : "file"}
+]
+},
+{"text" : "CTS-V", "id" : 1000, "leaf" : false, "cls" : "folder", "children" :
+[ {"text" : "Fuel Economy", "id" : "100000", "leaf" : true, "cls" : "file"},
+{"text" : "Invoice", "id" : "100001", "leaf" : true, "cls" : "file"},
+{"text" : "MSRP", "id" : "100002", "leaf" : true, "cls" : "file"},
+{"text" : "Options", "id" : "100003", "leaf" : true, "cls" : "file"},
+{"text" : "Specifications", "id" : "100004", "leaf" : true, "cls" : "file"}
+]
+}]
+}
+
+]

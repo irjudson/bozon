@@ -1,0 +1,10 @@
+/**
+This notice must be untouched at all times.
+This is the COMPRESSED version of Draw2D
+WebSite: http://www.draw2d.org
+Copyright: 2006 Andreas Herz. All rights reserved.
+Created: 5.11.2006 by Andreas Herz (Web: http://www.freegroup.de )
+LICENSE: LGPL
+**/
+
+FieldModel=function(name,_de7){this.name=name;this.label=_de7;};FieldModel.prototype.type="FieldModel";FieldModel.DBTYPE_TEXT="TEXT";FieldModel.DBTYPE_DOCUMENT="DOCUMENT";FieldModel.DBTYPE_INTEGER="INTEGER";FieldModel.DBTYPE_LONG="LONG";FieldModel.DBTYPE_FLOAT="FLOAT";FieldModel.DBTYPE_DOUBLE="DOUBLE";FieldModel.DBTYPE_DECIMAL="DECIMAL";FieldModel.DBTYPE_DATE="DATE";FieldModel.DBTYPE_TIME="TIME";FieldModel.DBTYPE_TIMESTAMP="TIMESTAMP";FieldModel.DBTYPE_LONGTEXT="LONGTEXT";FieldModel.DBTYPE_BINARY="BINARY";FieldModel.DBTYPE_ENUM="ENUM";FieldModel.DBTYPE_BOOLEAN="BOOLEAN";FieldModel.prototype.getLabel=function(){return this.label;};FieldModel.prototype.getName=function(){return this.name;};FieldModel.prototype.getExtendedDescriptionLabel=function(){if(this.getTypeName()==FieldModel.DBTYPE_TEXT){return this.getName()+" "+this.getTypeName()+"<"+this.getLengthAsString()+">";}return this.getName()+" "+this.getTypeName();};FieldModel.prototype.getTableModel=function(){return this.table;};FieldModel.prototype.getTypeName=function(){return this.typeModel.getName();};FieldModel.prototype.setTableModel=function(_de8){if(!(_de8 instanceof TableModel)){throw "Invalid parameter type in [FieldModel.prototype.setTableModel]";}this.table=_de8;};FieldModel.prototype.setTypeModel=function(_de9){if(!(_de9 instanceof FieldTypeModel)){throw "Invalid parameter type in [FieldModel.prototype.setTypeModel]";}this.typeModel=_de9;this.typeModel.setParent(this);};FieldModel.prototype.getTypeModel=function(){return this.typeModel;};FieldModel.prototype.getLengthAsString=function(){var _dea="";if(FieldModel.DBTYPE_TEXT==this.getTypeName()){_dea=Integer.toString(this.getTypeModel().getMaxLength());if(this.getTypeModel().getFixeLength()){_dea="["+_dea+"]";}}return _dea;};

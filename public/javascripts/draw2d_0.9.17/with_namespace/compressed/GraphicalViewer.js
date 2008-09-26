@@ -1,0 +1,10 @@
+/**
+This notice must be untouched at all times.
+This is the COMPRESSED version of Draw2D
+WebSite: http://www.draw2d.org
+Copyright: 2006 Andreas Herz. All rights reserved.
+Created: 5.11.2006 by Andreas Herz (Web: http://www.freegroup.de )
+LICENSE: LGPL
+**/
+
+draw2d.GraphicalViewer=function(id){draw2d.Workflow.call(this,id);this.factory=null;this.model=null;this.initDone=false;};draw2d.GraphicalViewer.prototype=new draw2d.Workflow;draw2d.GraphicalViewer.prototype.type="draw2d.GraphicalViewer";draw2d.GraphicalViewer.prototype.setEditPartFactory=function(_1d10){this.factory=_1d10;this.checkInit();};draw2d.GraphicalViewer.prototype.setModel=function(model){if(model instanceof draw2d.AbstractObjectModel){this.model=model;this.checkInit();}else{alert("Invalid model class type:"+model.type);}};draw2d.GraphicalViewer.prototype.checkInit=function(){if(this.factory!=null&&this.model!=null&&this.initDone==false){var _1d12=this.model.getModelChildren();var count=_1d12.getSize();for(var i=0;i<count;i++){var child=_1d12.get(i);var _1d16=this.factory.createEditPart(child);_1d16.setId(child.getId());this.addFigure(_1d16);}var _1d17=this.getDocument().getFigures();var count=_1d17.getSize();for(var i=0;i<count;i++){var _1d16=_1d17.get(i);if(_1d16 instanceof draw2d.Node){var _1d18=_1d16.getModelSourceConnections();}}}};draw2d.GraphicalViewer.prototype.refreshConnections=function(node){try{var _1d1a=node.getModelSourceConnections();var count=_1d1a.getSize();for(var i=0;i<count;i++){var _1d1d=_1d1a.get(i);var _1d1e=this.getLine(_1d1d.getId());if(_1d1e==null){_1d1e=this.factory.createEditPart(_1d1d);var _1d1f=_1d1d.getSourceModel();var _1d20=_1d1d.getTargetModel();var _1d21=this.getFigure(_1d1f.getId());var _1d22=this.getFigure(_1d20.getId());var _1d23=_1d21.getPort(_1d1d.getSourcePortName());var _1d24=_1d22.getPort(_1d1d.getTargetPortName());_1d1e.setTarget(_1d24);_1d1e.setSource(_1d23);this.addFigure(_1d1e);}}}catch(e){alert(e);}};

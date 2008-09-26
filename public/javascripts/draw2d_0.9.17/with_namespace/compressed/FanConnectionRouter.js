@@ -1,0 +1,10 @@
+/**
+This notice must be untouched at all times.
+This is the COMPRESSED version of Draw2D
+WebSite: http://www.draw2d.org
+Copyright: 2006 Andreas Herz. All rights reserved.
+Created: 5.11.2006 by Andreas Herz (Web: http://www.freegroup.de )
+LICENSE: LGPL
+**/
+
+draw2d.FanConnectionRouter=function(){};draw2d.FanConnectionRouter.prototype=new draw2d.NullConnectionRouter;draw2d.FanConnectionRouter.prototype.type="draw2d.FanConnectionRouter";draw2d.FanConnectionRouter.prototype.route=function(conn){var _2b3b=conn.getStartPoint();var toPt=conn.getEndPoint();var lines=conn.getSource().getConnections();var _2b3e=new draw2d.ArrayList();var index=0;for(var i=0;i<lines.getSize();i++){var _2b41=lines.get(i);if(_2b41.getTarget()==conn.getTarget()||_2b41.getSource()==conn.getTarget()){_2b3e.add(_2b41);if(conn==_2b41){index=_2b3e.getSize();}}}if(_2b3e.getSize()>1){this.routeCollision(conn,index);}else{draw2d.NullConnectionRouter.prototype.route.call(this,conn);}};draw2d.FanConnectionRouter.prototype.routeNormal=function(conn){conn.addPoint(conn.getStartPoint());conn.addPoint(conn.getEndPoint());};draw2d.FanConnectionRouter.prototype.routeCollision=function(conn,index){var start=conn.getStartPoint();var end=conn.getEndPoint();conn.addPoint(start);var _2b47=10;var _2b48=new draw2d.Point((end.x+start.x)/2,(end.y+start.y)/2);var _2b49=end.getPosition(start);var ray;if(_2b49==draw2d.PositionConstants.SOUTH||_2b49==draw2d.PositionConstants.EAST){ray=new draw2d.Point(end.x-start.x,end.y-start.y);}else{ray=new draw2d.Point(start.x-end.x,start.y-end.y);}var _2b4b=Math.sqrt(ray.x*ray.x+ray.y*ray.y);var _2b4c=_2b47*ray.x/_2b4b;var _2b4d=_2b47*ray.y/_2b4b;var _2b4e;if(index%2==0){_2b4e=new draw2d.Point(_2b48.x+(index/2)*(-1*_2b4d),_2b48.y+(index/2)*_2b4c);}else{_2b4e=new draw2d.Point(_2b48.x+(index/2)*_2b4d,_2b48.y+(index/2)*(-1*_2b4c));}conn.addPoint(_2b4e);conn.addPoint(end);};
