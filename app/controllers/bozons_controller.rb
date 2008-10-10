@@ -1,5 +1,3 @@
-require 'uuidtools'
-
 class BozonsController < ApplicationController
   # GET /bozons
   # GET /bozons.xml
@@ -38,7 +36,6 @@ class BozonsController < ApplicationController
 
   # GET /bozons/1/edit
   def edit
-    # Copy on edit
     @bozon = Bozon.find(params[:id])
     
     respond_to do |format|
@@ -51,8 +48,6 @@ class BozonsController < ApplicationController
   # POST /bozons.xml
   def create
     @bozon = Bozon.new(params[:bozon])
-    @bozon.cid = Digest::SHA1.hexdigest(@bozon.data)
-    @bozon.uuid = UUID.random_create().to_s
     
     respond_to do |format|
       if @bozon.save
@@ -73,9 +68,7 @@ class BozonsController < ApplicationController
   def update
     @old = Bozon.find(params[:id])    
     @bozon = Bozon.new(params[:bozon])
-    @bozon.uuid = @old.uuid
-    @bozon.parent = @old.cid
-    @bozon.cid = Digest::SHA1.hexdigest(@bozon.data)
+    @bozon.set_parent(@old)
     
     respond_to do |format|
       if @bozon.save
