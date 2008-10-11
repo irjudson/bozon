@@ -1,27 +1,9 @@
-<h1>Editing bozon</h1>
+<h1>Editing Bozon</h1>
 
 <% form_for(@bozon) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :data %><br />
-    <%= f.text_field :data %>
-  </p>
-  <p>
-    <%= f.label :cid %><br />
-    <%= f.text_field :cid %>
-  </p>
-  <p>
-    <%= f.label :uuid %><br />
-    <%= f.text_field :uuid %>
-  </p>
-  <p>
-    <%= f.label :parent %><br />
-    <%= f.text_field :parent %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+  <p><%= f.label :data %><br /><%= f.text_area :data %></p>
+  <p><%= f.submit "Update" %></p>
 <% end %>
 
 <%= link_to 'Show', @bozon %> |
