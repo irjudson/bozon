@@ -6,10 +6,7 @@ describe "/bozons/new.html.erb" do
   before(:each) do
     assigns[:bozon] = stub_model(Bozon,
       :new_record? => true,
-      :data => "value for data",
-      :cid => "value for cid",
-      :uuid => "value for uuid",
-      :parent => "value for parent"
+      :data => "value for data"
     )
   end
 
@@ -18,9 +15,6 @@ describe "/bozons/new.html.erb" do
     
     response.should have_tag("form[action=?][method=post]", bozons_path) do
       with_tag("input#bozon_data[name=?]", "bozon[data]")
-      with_tag("input#bozon_cid[name=?]", "bozon[cid]")
-      with_tag("input#bozon_uuid[name=?]", "bozon[uuid]")
-      with_tag("input#bozon_parent[name=?]", "bozon[parent]")
     end
   end
 end
